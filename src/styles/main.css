@@ -540,7 +540,72 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 .vision-lead .accent { color: var(--accent); font-weight: 600; }
 
 .solutions { padding: 4rem 0; background: var(--bg); }
-.pilot-projects { padding: 4rem 0; background: var(--bg-card); }
+.pilot-projects {
+  padding: 4rem 0;
+  background: var(--bg-card);
+  text-align: center;
+}
+.pilot-projects .section-title {
+  text-align: center;
+}
+
+/* Pilot projects: image with caption overlay (no card box) */
+.pilot-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .pilot-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.pilot-item {
+  margin: 0;
+  max-width: 360px;
+  width: 100%;
+}
+.pilot-image-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+.pilot-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  min-height: 0;
+  border-radius: 0;
+}
+.pilot-desc {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-size: .9rem;
+  line-height: 1.4;
+  color: #fff;
+  background: rgba(232, 93, 4, 0.8);
+  text-align: center;
+  transition: background .25s;
+}
+.pilot-image-wrap:hover .pilot-desc {
+  background: var(--accent);
+}
+.pilot-title {
+  margin: 0.6rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: center;
+}
 
 /* Shared card grid */
 .card-grid {
