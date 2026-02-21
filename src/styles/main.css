@@ -551,3 +551,164 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 .legal-page p,
 .legal-page ul { margin: 0 0 1rem; color: var(--text-muted); }
 .legal-page ul { padding-left: 1.5rem; }
+
+/* ===== Phone-first improvements ===== */
+@media (max-width: 767px) {
+  .header-inner {
+    gap: .75rem;
+    padding: .75rem 1rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+    gap: .3rem;
+  }
+
+  .nav-mobile {
+    gap: .35rem;
+    padding: 0 .9rem 1rem;
+    max-height: calc(100svh - 68px);
+    overflow-y: auto;
+  }
+
+  .nav-mobile a {
+    padding: .8rem .9rem;
+    font-size: 1rem;
+  }
+
+  .hero {
+    min-height: 78svh;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+  }
+
+  .hero-bg::after {
+    background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.65) 52%, rgba(0,0,0,.75) 100%);
+  }
+
+  .hero-inner {
+    padding-top: 4.5rem;
+    padding-bottom: .5rem;
+  }
+
+  .hero-text { max-width: 100%; }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 9vw, 2.4rem);
+    margin-bottom: .75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    max-width: 34ch;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: .75rem;
+  }
+
+  .hero-actions .btn,
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .btn {
+    min-height: 46px;
+    padding: .7rem 1rem;
+  }
+
+  .partners {
+    padding: 1.25rem 0;
+  }
+
+  .partners-carousel-wrap { margin: 0; }
+
+  .partners-carousel-wrap::before,
+  .partners-carousel-wrap::after {
+    width: 84px;
+    max-width: 24%;
+  }
+
+  .partners-carousel-track {
+    padding: .65rem 0;
+    animation-duration: 28s;
+  }
+
+  .partners-carousel-segment {
+    gap: .9rem;
+    padding: 0 .75rem;
+  }
+
+  .partner-logo {
+    width: 112px;
+    height: 58px;
+    font-size: .68rem;
+  }
+
+  .partners-carousel-wrap:hover .partner-logo { filter: blur(2px); }
+
+  /* Hover interactions are not discoverable on phones; keep CTA visible. */
+  .partners-cta-overlay {
+    opacity: 1;
+    align-items: flex-end;
+    padding-bottom: .8rem;
+    background: linear-gradient(to top, rgba(255,249,246,.86) 0%, rgba(255,249,246,0) 50%);
+    pointer-events: none;
+  }
+
+  .partners-cta-overlay .btn {
+    pointer-events: auto;
+    padding: .55rem .95rem;
+    font-size: .92rem;
+  }
+
+  .vision,
+  .solutions,
+  .pilot-projects,
+  .band {
+    padding: 2.5rem 0;
+  }
+
+  .layout-2col { gap: 1.25rem; }
+  .card-grid { gap: 1rem; }
+  .card { padding: 1rem; }
+  .vision-img { min-height: 180px; }
+  .why-us-img { min-height: 170px; }
+
+  .footer-inner {
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .footer-links {
+    gap: 1.25rem;
+    justify-content: space-between;
+  }
+
+  .page-connect,
+  .legal-page {
+    padding: 2rem 0 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container { padding-inline: .875rem; }
+
+  .logo { font-size: .95rem; }
+
+  .hero-title { font-size: clamp(1.7rem, 10vw, 2.15rem); }
+  .hero-subtitle { font-size: .95rem; }
+
+  .partners-carousel-wrap::before,
+  .partners-carousel-wrap::after { display: none; }
+
+  .partner-logo {
+    width: 104px;
+    height: 54px;
+  }
+
+  .footer-links { gap: .8rem; }
+}
