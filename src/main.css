@@ -86,17 +86,6 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   transition: color .25s;
 }
 .site-header.scrolled .logo { color: var(--text); }
-.logo-icon {
-  height: 1.9rem;
-  width: auto;
-  object-fit: contain;
-  animation: logo-float 4s ease-in-out infinite;
-}
-.logo:hover .logo-icon { animation-duration: 2.5s; }
-@keyframes logo-float {
-  0%,100% { transform: translateY(0) scale(1); }
-  50%      { transform: translateY(-3px) scale(1.04); }
-}
 .logo-accent { color: var(--accent); }
 
 /* Desktop nav */
