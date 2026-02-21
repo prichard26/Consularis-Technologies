@@ -47,7 +47,7 @@ Alternatively, you can point the form to another endpoint (e.g. your own API or 
 1. **GitHub Pages**
    - Push this repo to GitHub.
    - Go to **Settings → Pages**.
-   - Under "Build and deployment", choose **GitHub Actions** (the workflow in `.github/workflows/deploy.yml` will build and deploy the `dist/` output).
+   - Under "Build and deployment", set **Source** to **GitHub Actions**. The workflow in `.github/workflows/deploy.yml` builds and deploys the `dist/` output. If you see 404s for `main.css`, `main.js`, or `hero.webp`, the site is likely being served from a branch instead of the Actions artifact—switch the Pages source to **GitHub Actions**.
 
 2. **Custom domain**
    - In **Settings → Pages**, set your custom domain (e.g. `www.consularis.com`).
