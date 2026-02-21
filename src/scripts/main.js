@@ -7,6 +7,9 @@
   const navMobile = document.getElementById('nav-mobile');
   const yearEl = document.getElementById('year');
   const hasHero = !!document.querySelector('.hero');
+  const isPhone = () => window.matchMedia('(max-width: 767px)').matches;
+  let lastY = window.scrollY;
+  let scrollDownTimer;
 
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -43,8 +46,32 @@
 
   // Fixed transparent header: solid when scrolled past hero
   function onScroll() {
+    const currentY = window.scrollY;
     header.classList.toggle('scrolled', !hasHero || window.scrollY > 80);
+
+    if (!isPhone()) {
+      document.body.classList.remove('is-scrolling-down');
+      lastY = currentY;
+      return;
+    }
+
+    const delta = currentY - lastY;
+
+    if (delta > 3 && currentY > 50) {
+      document.body.classList.add('is-scrolling-down');
+      clearTimeout(scrollDownTimer);
+      scrollDownTimer = setTimeout(() => {
+        document.body.classList.remove('is-scrolling-down');
+      }, 420);
+    } else if (delta < -2 || currentY < 40) {
+      document.body.classList.remove('is-scrolling-down');
+    }
+
+    lastY = currentY;
   }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', () => {
+    if (!isPhone()) document.body.classList.remove('is-scrolling-down');
+  });
 })();

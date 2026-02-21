@@ -577,9 +577,9 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   }
 
   .hero {
-    min-height: 78svh;
+    min-height: clamp(320px, 62svh, 560px);
     align-items: flex-end;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
   }
 
   .hero-bg::after {
@@ -587,11 +587,13 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   }
 
   .hero-inner {
-    padding-top: 4.5rem;
-    padding-bottom: .5rem;
+    padding-top: 4.25rem;
+    padding-bottom: .35rem;
   }
 
   .hero-text { max-width: 100%; }
+
+  .hero-bg img { object-position: center 30%; }
 
   .hero-title {
     font-size: clamp(1.85rem, 9vw, 2.4rem);
@@ -621,7 +623,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   }
 
   .partners {
-    padding: 1.25rem 0;
+    padding: 1rem 0 1.1rem;
   }
 
   .partners-carousel-wrap { margin: 0; }
@@ -650,13 +652,18 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
   .partners-carousel-wrap:hover .partner-logo { filter: blur(2px); }
 
-  /* Hover interactions are not discoverable on phones; keep CTA visible. */
+  /* Phone UX: show CTA only while the user scrolls down. */
   .partners-cta-overlay {
-    opacity: 1;
+    opacity: 0;
     align-items: flex-end;
     padding-bottom: .8rem;
     background: linear-gradient(to top, rgba(255,249,246,.86) 0%, rgba(255,249,246,0) 50%);
     pointer-events: none;
+  }
+
+  body.is-scrolling-down .partners-cta-overlay {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .partners-cta-overlay .btn {
@@ -699,8 +706,12 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
   .logo { font-size: .95rem; }
 
+  .hero { min-height: clamp(300px, 58svh, 500px); }
+
   .hero-title { font-size: clamp(1.7rem, 10vw, 2.15rem); }
   .hero-subtitle { font-size: .95rem; }
+
+  .hero-bg img { object-position: center 26%; }
 
   .partners-carousel-wrap::before,
   .partners-carousel-wrap::after { display: none; }
