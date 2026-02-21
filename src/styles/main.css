@@ -126,8 +126,8 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   transition: color .25s, background .2s;
 }
 .site-header.scrolled .nav-toggle { color: var(--text); }
-.nav-toggle:hover { background: rgba(255,255,255,.15); }
-.site-header.scrolled .nav-toggle:hover { background: var(--accent-light); color: var(--accent); }
+.nav-toggle:hover { background: none; color: var(--accent); }
+.site-header.scrolled .nav-toggle:hover { background: none; color: var(--accent); }
 .nav-toggle span {
   display: block;
   width: 22px;
