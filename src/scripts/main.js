@@ -13,6 +13,38 @@
 
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // Spotlight title: split into spans for letter-by-letter animation (orange → black)
+  const spotlightTitle = document.getElementById('spotlight-title');
+  if (spotlightTitle) {
+    const text = spotlightTitle.textContent;
+    spotlightTitle.textContent = '';
+    spotlightTitle.setAttribute('aria-label', text);
+    let i = 0;
+    for (const char of text) {
+      const span = document.createElement('span');
+      span.className = 'title-char';
+      span.style.setProperty('--i', i);
+      span.textContent = char;
+      if (char === ' ') span.classList.add('title-char--space');
+      spotlightTitle.appendChild(span);
+      i++;
+    }
+    // Re-run animation when title enters viewport (re-appear)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in-view');
+          } else {
+            entry.target.classList.remove('is-in-view');
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: '0px' }
+    );
+    observer.observe(spotlightTitle);
+  }
+
   if (navToggle && navMobile) {
     const setMenuState = (isOpen) => {
       header.classList.toggle('is-open', isOpen);
@@ -73,5 +105,16 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', () => {
     if (!isPhone()) document.body.classList.remove('is-scrolling-down');
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-trigger').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const answer = document.getElementById(btn.getAttribute('aria-controls'));
+      const isOpen = item.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen);
+      if (answer) answer.hidden = !isOpen;
+    });
   });
 })();
