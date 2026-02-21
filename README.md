@@ -34,7 +34,7 @@ npm run preview
 The **Connect** page uses a form that posts to [Formspree](https://formspree.io). To receive emails:
 
 1. Sign up at [formspree.io](https://formspree.io) and create a form.
-2. In `connect.html`, replace `YOUR_FORM_ID` in the form `action` with your Formspree form ID:
+2. In `pages/connect.html`, replace `YOUR_FORM_ID` in the form `action` with your Formspree form ID:
 
    ```html
    action="https://formspree.io/f/YOUR_FORM_ID"
@@ -59,23 +59,26 @@ After the first push, the Actions workflow will build and publish the site. Subs
 ## Project structure
 
 ```
-├── index.html          # Home
-├── connect.html        # Contact / Connect form
-├── imprint.html        # Imprint
-├── privacy.html        # Privacy policy
+├── index.html              # Home (landing)
+├── pages/
+│   ├── connect.html        # Contact / Connect form
+│   ├── imprint.html        # Imprint
+│   └── privacy.html        # Privacy policy
 ├── src/
-│   ├── main.css        # Global styles (variables, layout, components)
-│   └── main.js         # Header nav, footer year
-├── public/             # Static assets (e.g. CNAME for custom domain)
+│   ├── styles/
+│   │   └── main.css        # Global styles (tokens, layout, components)
+│   └── scripts/
+│       └── main.js         # Header nav, footer year, scroll state
+├── public/                 # Static assets (hero image, CNAME for custom domain)
 ├── .github/workflows/
-│   └── deploy.yml      # Build and deploy to GitHub Pages
+│   └── deploy.yml         # Build and deploy to GitHub Pages
 └── vite.config.js
 ```
 
 ## Legal placeholders
 
-- **Imprint** (`imprint.html`): replace bracketed placeholders with your company name, address, and responsible person.
-- **Privacy** (`privacy.html`): add the last-update date and adjust wording to match your jurisdiction (e.g. GDPR).
+- **Imprint** (`pages/imprint.html`): replace bracketed placeholders with your company name, address, and responsible person.
+- **Privacy** (`pages/privacy.html`): add the last-update date and adjust wording to match your jurisdiction (e.g. GDPR).
 
 ## License
 

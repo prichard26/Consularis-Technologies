@@ -10,9 +10,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        connect: resolve(__dirname, 'connect.html'),
-        imprint: resolve(__dirname, 'imprint.html'),
-        privacy: resolve(__dirname, 'privacy.html'),
+        connect: resolve(__dirname, 'pages/connect.html'),
+        imprint: resolve(__dirname, 'pages/imprint.html'),
+        privacy: resolve(__dirname, 'pages/privacy.html'),
       },
       output: {
         manualChunks: undefined,
