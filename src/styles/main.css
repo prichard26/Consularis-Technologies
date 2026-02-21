@@ -554,6 +554,8 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 /* ===== Phone-first improvements ===== */
 @media (max-width: 767px) {
+  :root { --phone-partners-h: 104px; }
+
   .header-inner {
     gap: .75rem;
     padding: .75rem 1rem;
@@ -577,7 +579,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   }
 
   .hero {
-    min-height: clamp(320px, 62svh, 560px);
+    min-height: clamp(320px, calc(100svh - 72px - var(--phone-partners-h)), 620px);
     align-items: flex-end;
     padding-bottom: 1.5rem;
   }
@@ -623,7 +625,8 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   }
 
   .partners {
-    padding: 1rem 0 1.1rem;
+    min-height: var(--phone-partners-h);
+    padding: .45rem 0 .55rem;
   }
 
   .partners-carousel-wrap { margin: 0; }
@@ -635,7 +638,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   }
 
   .partners-carousel-track {
-    padding: .65rem 0;
+    padding: .35rem 0;
     animation-duration: 28s;
   }
 
@@ -645,8 +648,8 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   }
 
   .partner-logo {
-    width: 112px;
-    height: 58px;
+    width: 108px;
+    height: 54px;
     font-size: .68rem;
   }
 
@@ -702,11 +705,13 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 }
 
 @media (max-width: 480px) {
+  :root { --phone-partners-h: 96px; }
+
   .container { padding-inline: .875rem; }
 
   .logo { font-size: .95rem; }
 
-  .hero { min-height: clamp(300px, 58svh, 500px); }
+  .hero { min-height: clamp(300px, calc(100svh - 70px - var(--phone-partners-h)), 560px); }
 
   .hero-title { font-size: clamp(1.7rem, 10vw, 2.15rem); }
   .hero-subtitle { font-size: .95rem; }
@@ -717,8 +722,8 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   .partners-carousel-wrap::after { display: none; }
 
   .partner-logo {
-    width: 104px;
-    height: 54px;
+    width: 100px;
+    height: 50px;
   }
 
   .footer-links { gap: .8rem; }
