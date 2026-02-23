@@ -103,9 +103,17 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   }
   .nav-desktop a:hover { color: rgba(255,255,255,.8); text-decoration: none; }
   .nav-desktop .nav-cta { color: var(--accent-light); }
+  .nav-desktop .lang-switcher { font-size: 0.875rem; margin-left: 0.5rem; color: #fff; }
+  .nav-desktop .lang-switcher .lang-current { color: var(--accent); }
+  .nav-desktop .lang-switcher a { color: #fff; text-decoration: none; }
+  .nav-desktop .lang-switcher a:hover { color: var(--accent); }
   .site-header.scrolled .nav-desktop a { color: var(--text); }
   .site-header.scrolled .nav-desktop a:hover { color: var(--accent); }
   .site-header.scrolled .nav-desktop .nav-cta { color: var(--accent); }
+  .site-header.scrolled .nav-desktop .lang-switcher { color: var(--text); }
+  .site-header.scrolled .nav-desktop .lang-switcher .lang-current { color: var(--accent); }
+  .site-header.scrolled .nav-desktop .lang-switcher a { color: var(--text); }
+  .site-header.scrolled .nav-desktop .lang-switcher a:hover { color: var(--accent); }
 }
 
 /* Hamburger */
@@ -150,6 +158,10 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   background: var(--header-bg);
 }
 .site-header.is-open .nav-mobile { display: flex; }
+.nav-mobile .lang-switcher { padding: .75rem; font-size: 0.875rem; color: var(--text); }
+.nav-mobile .lang-switcher .lang-current { color: var(--accent); }
+.nav-mobile .lang-switcher a { color: var(--text); text-decoration: none; }
+.nav-mobile .lang-switcher a:hover { color: var(--accent); }
 .nav-mobile a {
   padding: .75rem;
   color: var(--text);
