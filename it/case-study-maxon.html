@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23e85d04' rx='4'/><text x='16' y='22' font-size='14' font-family='system-ui,sans-serif' font-weight='bold' fill='white' text-anchor='middle'>C</text></svg>" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Caso studio: piattaforma ERP Streamlit per PM, login IAM, export BOM e liste verso Excel." />
+    <title>Caso studio automazione ERP | Consularis Technologies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Outfit:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/styles/main.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="site-header site-header--article" id="site-header">
+        <div class="header-inner">
+          <a href="index.html" class="logo" aria-label="Consularis Technologies home">
+            <span class="logo-text">Consularis</span><span class="logo-accent">Technologies</span>
+          </a>
+          <nav class="nav-desktop" aria-label="Navigazione principale">
+            <a href="index.html#what-we-do">Cosa facciamo</a>
+            <a href="index.html#pilot-projects">Casi studio</a>
+            <a href="connect.html" class="nav-cta nav-desktop-push">Contatti</a>
+            <a href="consularis-ai.html" class="nav-product-pill">Consularis.ai</a>
+            <span class="lang-switcher"><a href="../pages/case-study-maxon.html">EN</a> | <span class="lang-current">IT</span> | <a href="../fr/case-study-maxon.html">FR</a></span>
+          </nav>
+          <button type="button" class="nav-toggle" aria-label="Apri menu" aria-expanded="false" id="nav-toggle">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <nav class="nav-mobile" id="nav-mobile" aria-hidden="true">
+          <a href="index.html#what-we-do">Cosa facciamo</a>
+          <a href="index.html#pilot-projects">Casi studio</a>
+          <a href="connect.html" class="nav-cta">Contatti</a>
+          <a href="consularis-ai.html" class="nav-product-pill">Consularis.ai</a>
+          <span class="lang-switcher"><a href="../pages/case-study-maxon.html">EN</a> | <span class="lang-current">IT</span> | <a href="../fr/case-study-maxon.html">FR</a></span>
+        </nav>
+      </header>
+
+      <main class="legal-page page-article page-story page-story--erp">
+        <header class="page-story-band page-story-band--grid page-story-hero">
+          <div class="page-story-container">
+            <p class="page-article-kicker">Caso studio</p>
+            <h1>Automazione <span class="accent">ERP</span> che i PM usano davvero</h1>
+            <p class="page-story-deck">I team di programma di un <strong>costruttore svizzero di motori</strong> perdevano ore sugli <strong>stessi export ERP ogni settimana</strong>. Abbiamo consegnato una <strong>applicazione Streamlit interna</strong> sul loro stack: estrazioni strutturate, passaggio pulito verso <strong>Excel</strong>, <strong>zero shadow IT</strong>.</p>
+            <ul class="page-story-chips" role="list">
+              <li>Streamlit</li>
+              <li>Infrastruttura cliente</li>
+              <li>IAM / SSO</li>
+              <li>Integrazione ERP</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="page-story-band page-story-band--plain" aria-labelledby="erp-context-heading">
+          <div class="page-story-container">
+            <p class="page-story-section-label">Contesto</p>
+            <h2 id="erp-context-heading" class="page-story-h2">I dati erano già giusti. Il flusso no.</h2>
+            <blockquote class="page-story-pull">Logica BOM, liste e tracker erano già nell’ERP. L’attrito era la ripetizione: export, aggiustamenti manuali, nuovo export, e la paura che qualcuno rompesse la colonna sbagliata.</blockquote>
+            <div class="page-story-split">
+              <div>
+                <p class="page-story-lead">I project manager avevano bisogno di <strong>artefatti ripetibili</strong> per review, fornitori e approvazioni interne. Ogni passata doveva somigliare alla precedente, senza una persona come middleware umano.</p>
+                <p class="page-story-lead">Mandato chiaro: <strong>restare nel perimetro di fiducia aziendale</strong>, usare identità note e offrire uno strumento che si apre il lunedì mattina, non finisce in un cassetto.</p>
+              </div>
+              <aside class="page-story-aside" aria-label="Cosa abbiamo ottimizzato">
+                <p class="page-story-aside-title">Cosa abbiamo ottimizzato</p>
+                <p>Meno copia-incolla. Meno file una tantum. Più tempo per coordinamento, rischio e consegna, non per riformattare.</p>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-story-band page-story-band--grid" aria-labelledby="erp-built-heading">
+          <div class="page-story-container">
+            <p class="page-story-section-label">Build</p>
+            <h2 id="erp-built-heading" class="page-story-h2">Cosa abbiamo messo in produzione</h2>
+            <p class="page-story-lead">Front end Streamlit che parla con l’ERP tramite <strong>integrazione controllata</strong>, ospitato <strong>sull’infrastruttura del cliente</strong> accanto ai sistemi che già contano.</p>
+            <div class="page-story-card-grid page-story-card-grid--2">
+              <article class="page-story-card">
+                <h3>Flussi da PM</h3>
+                <p>Attività allineate a come lavora il delivery: estrarre dati strutturati, adattarli al meeting o al partner, andare avanti.</p>
+              </article>
+              <article class="page-story-card">
+                <h3>Letture autorevoli</h3>
+                <p>Niente database ombra. L’ERP resta la fonte di verità; l’app è il percorso disciplinato verso l’esterno.</p>
+              </article>
+              <article class="page-story-card">
+                <h3>Presentazione che risparmia tempo</h3>
+                <p>Impaginazione dove serve: pronta per Excel e per chi legge la griglia sotto pressione.</p>
+              </article>
+              <article class="page-story-card">
+                <h3>Spazio per evolvere</h3>
+                <p>Python e Streamlit rendono onesta l’iterazione quando arriva il prossimo tipo di export in backlog.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-story-band page-story-band--tint" aria-labelledby="erp-security-heading">
+          <div class="page-story-container">
+            <p class="page-story-section-label">Fiducia</p>
+            <h2 id="erp-security-heading" class="page-story-h2">Sicurezza senza teatro</h2>
+            <div class="page-story-split">
+              <div>
+                <p class="page-story-lead">Autenticazione tramite <strong>IAM / SSO aziendale</strong> con <strong>identità esistenti</strong>. Se non devi vedere i dati operativi, non entri nell’app.</p>
+                <p class="page-story-lead">I dati restano nel <strong>medesimo perimetro</strong> del resto dell’azienda. L’obiettivo è meno export informali, non più allegati misteriosi.</p>
+              </div>
+              <aside class="page-story-aside" aria-label="Risultato sicurezza">
+                <p class="page-story-aside-title">Risultato</p>
+                <p>Solo utenti autorizzati. Accesso tracciabile. Niente “mandami il CSV” come scorciatoia predefinita.</p>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-story-band page-story-band--plain" aria-labelledby="erp-scope-heading">
+          <div class="page-story-container">
+            <p class="page-story-section-label">Ambito</p>
+            <h2 id="erp-scope-heading" class="page-story-h2">Cosa ha coperto la prima ondata</h2>
+            <p class="page-story-lead">Compiti tipici: generare e formattare <strong>distinte base (BOM)</strong>, <strong>liste di trasferimento</strong>, <strong>liste di processo</strong> e artefatti ERP che i PM toccano ogni sprint.</p>
+            <ul class="page-story-pills" role="list">
+              <li>BOM</li>
+              <li>Liste trasferimento</li>
+              <li>Liste processo</li>
+              <li>Tracker parti</li>
+              <li>Output pronti per Excel</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="page-story-band page-story-band--grid page-story-video" aria-labelledby="erp-video-heading">
+          <div class="page-story-container">
+            <p class="page-story-section-label">Tour</p>
+            <h2 id="erp-video-heading" class="page-story-h2">Guarda la piattaforma in azione</h2>
+            <p class="page-story-lead">Tour breve: da dati ERP strutturati a export affidabili per i project manager.</p>
+            <div class="video-embed video-embed--article">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/aVoR-77kp8c"
+                title="Automazione ERP per un produttore: BOM, tracker parti, liste di processo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+
+        <footer class="page-story-footer page-story-band--plain">
+          <div class="page-story-container">
+            <p><a href="index.html#pilot-projects">← Tutti i casi studio</a> · <a href="index.html">Home</a></p>
+          </div>
+        </footer>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner container">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <span class="logo-text">Consularis</span><span class="logo-accent">Technologies</span>
+            </a>
+            <p class="footer-tagline">Process intelligence, ERP data automation, and tailored digital solutions.</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-col">
+              <h4>Sito</h4>
+              <ul>
+                <li><a href="index.html#what-we-do">Cosa facciamo</a></li>
+                <li><a href="consularis-ai.html">Consularis.ai</a></li>
+                <li><a href="index.html#pilot-projects">Casi studio</a></li>
+                <li><a href="connect.html">Contatti</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Legale</h4>
+              <ul>
+                <li><a href="imprint.html">Note legali</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <p>&copy; <span id="year"></span> Consularis Technologies. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="../src/scripts/main.js"></script>
+  </body>
+</html>

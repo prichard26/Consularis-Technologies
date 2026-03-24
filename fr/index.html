@@ -2,17 +2,17 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <base href="/Consularis-Technologies/fr/" />
+    <base href="./" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23e85d04' rx='4'/><text x='16' y='22' font-size='14' font-family='system-ui,sans-serif' font-weight='bold' fill='white' text-anchor='middle'>C</text></svg>" type="image/svg+xml" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Consularis Technologies – Digitalisation stratégique, conseil ERP et flux structurés pour un impact business mesurable. Solutions européennes, conformes aux données et évolutives." />
-    <meta property="og:title" content="Consularis Technologies – Digitalisation et conseil" />
-    <meta property="og:description" content="Digitalisation stratégique et conseil pour un impact business mesurable." />
+    <meta name="description" content="Consularis Technologies | Intelligence processus avec Consularis.ai, automatisation des données ERP et solutions digitales sur mesure. Conseil européen et conforme aux données." />
+    <meta property="og:title" content="Consularis Technologies | Intelligence processus et digitalisation" />
+    <meta property="og:description" content="Cartographiez et analysez vos processus, automatisez les flux ERP et déployez des solutions personnalisées à impact mesurable." />
     <meta property="og:type" content="website" />
-    <title>Consularis Technologies – Digitalisation et conseil</title>
+    <title>Consularis Technologies | Intelligence processus et digitalisation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="../hero.webp" as="image" type="image/webp" />
+    <link rel="preload" href="../images/hero/hero.webp" as="image" type="image/webp" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Outfit:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../src/styles/main.css" />
   </head>
@@ -25,8 +25,9 @@
           </a>
           <nav class="nav-desktop" aria-label="Navigation principale">
             <a href="#what-we-do">Ce que nous faisons</a>
-            <a href="#pilot-projects">Projets pilotes</a>
-            <a href="connect.html" class="nav-cta">Contact</a>
+            <a href="#pilot-projects">Études de cas</a>
+            <a href="connect.html" class="nav-cta nav-desktop-push">Contact</a>
+            <a href="consularis-ai.html" class="nav-product-pill">Consularis.ai</a>
             <span class="lang-switcher" aria-label="Langue"><a href="../">EN</a> | <a href="../it/">IT</a> | <span class="lang-current">FR</span></span>
           </nav>
           <button type="button" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" id="nav-toggle">
@@ -35,8 +36,9 @@
         </div>
         <nav class="nav-mobile" id="nav-mobile" aria-hidden="true">
           <a href="#what-we-do">Ce que nous faisons</a>
-          <a href="#pilot-projects">Projets pilotes</a>
+          <a href="#pilot-projects">Études de cas</a>
           <a href="connect.html" class="nav-cta">Contact</a>
+          <a href="consularis-ai.html" class="nav-product-pill">Consularis.ai</a>
           <span class="lang-switcher"><a href="../">EN</a> | <a href="../it/">IT</a> | <span class="lang-current">FR</span></span>
         </nav>
       </header>
@@ -44,18 +46,18 @@
       <main>
         <section class="hero">
           <div class="hero-bg" aria-hidden="true">
-            <img src="../hero.webp" alt="" width="1920" height="1080" fetchpriority="high" />
+            <img src="../images/hero/hero.webp" alt="" width="1920" height="1080" fetchpriority="high" />
           </div>
           <div class="container hero-inner">
             <div class="hero-text">
               <h1 class="hero-title">
-                <span>Réduisez les coûts.</span>
-                <span>Optimisez l'efficacité.</span>
+                <span>Cartographiez les processus.</span>
+                <span>Déplacez les données. Des solutions sur mesure.</span>
               </h1>
-              <p class="hero-subtitle">Digitalisation <strong>stratégique</strong> et <strong>conseil</strong> pour un impact business mesurable.</p>
+              <p class="hero-subtitle">Voyez comment le travail circule vraiment, amenez les <strong>données ERP</strong> vers Excel et les outils que vos équipes utilisent déjà, et mettez en place des <strong>flux personnalisés</strong> qui tiennent dans la durée. Des résultats nets, pas une rivière de slides.</p>
               <div class="hero-actions">
                 <a href="connect.html" class="btn btn-primary">Contactez-nous</a>
-                <a href="#what-we-do" class="btn btn-outline-white">Ce que nous faisons</a>
+                <a href="consularis-ai.html" class="btn btn-outline-white">Découvrir Consularis.ai</a>
               </div>
             </div>
           </div>
@@ -64,32 +66,38 @@
         <section class="partners" id="partners">
           <div class="partners-carousel-wrap">
             <div class="partners-cta-overlay" aria-hidden="true">
-              <a href="#pilot-projects" class="btn btn-primary">Découvrez nos clients</a>
+              <a href="#pilot-projects" class="btn btn-primary">Études de cas</a>
             </div>
-            <div class="partners-carousel-track" aria-label="Logos partenaires">
+            <div class="partners-carousel-track" aria-label="Secteurs accompagnés">
               <div class="partners-carousel-segment">
-                <div class="partner-logo" aria-hidden="true"><span>Maxon</span></div>
+                <div class="partner-logo" aria-hidden="true"><span>Industrie</span></div>
                 <div class="partner-logo" aria-hidden="true"><span>Pharmacies</span></div>
-                <div class="partner-logo" aria-hidden="true"><span>Joachim Lux</span></div>
-                <div class="partner-logo" aria-hidden="true"><span>Partner</span></div>
-                <div class="partner-logo" aria-hidden="true"><span>Partner</span></div>
-                <div class="partner-logo" aria-hidden="true"><span>Partner</span></div>
+                <div class="partner-logo" aria-hidden="true"><span>Commerce</span></div>
+                <div class="partner-logo" aria-hidden="true"><span>Logistique</span></div>
+                <div class="partner-logo" aria-hidden="true"><span>Mécanique</span></div>
+                <div class="partner-logo" aria-hidden="true"><span>Restauration</span></div>
+                <div class="partner-logo" aria-hidden="true"><span>Travail répétitif</span></div>
+                <div class="partner-logo" aria-hidden="true"><span>PME</span></div>
               </div>
               <div class="partners-carousel-segment" aria-hidden="true">
-                <div class="partner-logo"><span>Maxon</span></div>
+                <div class="partner-logo"><span>Industrie</span></div>
                 <div class="partner-logo"><span>Pharmacies</span></div>
-                <div class="partner-logo"><span>Joachim Lux</span></div>
-                <div class="partner-logo"><span>Partner</span></div>
-                <div class="partner-logo"><span>Partner</span></div>
-                <div class="partner-logo"><span>Partner</span></div>
+                <div class="partner-logo"><span>Commerce</span></div>
+                <div class="partner-logo"><span>Logistique</span></div>
+                <div class="partner-logo"><span>Mécanique</span></div>
+                <div class="partner-logo"><span>Restauration</span></div>
+                <div class="partner-logo"><span>Travail répétitif</span></div>
+                <div class="partner-logo"><span>PME</span></div>
               </div>
               <div class="partners-carousel-segment" aria-hidden="true">
-                <div class="partner-logo"><span>Maxon</span></div>
+                <div class="partner-logo"><span>Industrie</span></div>
                 <div class="partner-logo"><span>Pharmacies</span></div>
-                <div class="partner-logo"><span>Joachim Lux</span></div>
-                <div class="partner-logo"><span>Partner</span></div>
-                <div class="partner-logo"><span>Partner</span></div>
-                <div class="partner-logo"><span>Partner</span></div>
+                <div class="partner-logo"><span>Commerce</span></div>
+                <div class="partner-logo"><span>Logistique</span></div>
+                <div class="partner-logo"><span>Mécanique</span></div>
+                <div class="partner-logo"><span>Restauration</span></div>
+                <div class="partner-logo"><span>Travail répétitif</span></div>
+                <div class="partner-logo"><span>PME</span></div>
               </div>
             </div>
           </div>
@@ -99,9 +107,11 @@
           <div class="container layout-2col">
             <div>
               <h2 class="section-title">Vision</h2>
-              <p class="vision-lead">Moins de gaspillage. Plus d'impact. <span class="accent">Coûts</span>, <span class="accent">temps</span> et <span class="accent">efficacité</span> — conformes aux normes européennes et à la protection des données.</p>
+              <p class="vision-lead">De la clarté avant l’automatisation : comprendre ce qui compte, puis investir dans les bons flux de données et outils. Moins de gaspillage, plus d’impact : <span class="accent">coûts</span>, <span class="accent">temps</span> et <span class="accent">efficacité</span> au regard des normes européennes et de la conformité des données.</p>
             </div>
-            <div class="img-placeholder vision-img" aria-hidden="true"></div>
+            <div class="img-placeholder vision-img" aria-hidden="true">
+              <img src="../images/vision/nine-islands.png" alt="" decoding="async" />
+            </div>
           </div>
         </section>
 
@@ -110,57 +120,53 @@
             <h2 class="section-title section-title--large section-title--animate" id="spotlight-title">Ce que nous pouvons faire pour vous</h2>
           </div>
           <div class="spotlight-grid-wrap">
-            <div class="container layout-2col layout-2col--spotlight">
-              <div class="spotlight-content">
-                <h3 class="spotlight-heading">Travaillez en toute autonomie.</h3>
-                <p class="spotlight-lead">Processus, flux de travail, données — plus de résultats dans un écosystème connecté. Nous vous aidons à réduire les coûts et gagner du temps grâce à une digitalisation structurée.</p>
-                <ul class="feature-tags" role="list">
-                  <li class="feature-tag">
-                    <span class="feature-tag-text">ERP et amélioration des processus</span>
-                    <span class="feature-tag-check" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 4L6 11 3 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                  </li>
-                  <li class="feature-tag">
-                    <span class="feature-tag-text">Flux de travail et automatisation</span>
-                    <span class="feature-tag-check" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 4L6 11 3 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                  </li>
-                  <li class="feature-tag">
-                    <span class="feature-tag-text">Décisions data-driven et conformité</span>
-                    <span class="feature-tag-check" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 4L6 11 3 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                  </li>
-                </ul>
-                <a href="connect.html" class="btn btn-primary btn--arrow">Nous contacter</a>
-              </div>
-              <div class="spotlight-visual" aria-hidden="true">
-                <div class="spotlight-image"></div>
-              </div>
+            <div class="container pillars-grid">
+              <article class="pillar-card">
+                <h3 class="pillar-card-title">Intelligence processus</h3>
+                <p class="pillar-card-text">Cartographiez les processus de l’entreprise, analysez-les et identifiez ce qu’il faut optimiser et automatiser en premier, avant d’engager le budget. Le produit <strong>Consularis.ai</strong> en fait un graphe interactif et un rapport exploitable.</p>
+                <p class="pillar-card-meta"><a href="consularis-ai.html">Comment ça marche</a></p>
+              </article>
+              <article class="pillar-card">
+                <h3 class="pillar-card-title">Transfert de données ERP et automatisation</h3>
+                <p class="pillar-card-text">Automatisez le déplacement fiable des données de l’ERP vers d’autres outils (Excel, reporting, exports) selon des planifications que les équipes maîtrisent. Souvent le premier gain concret après avoir clarifié les processus.</p>
+                <p class="pillar-card-meta"><a href="case-study-maxon.html">Lire l’étude de cas sur l’automatisation ERP</a></p>
+              </article>
+              <article class="pillar-card">
+                <h3 class="pillar-card-title">Solutions personnalisées</h3>
+                <p class="pillar-card-text">Flux et intégrations sur mesure pour des opérations spécialisées : retail, santé et environnements réglementés où les outils standards ne suffisent pas.</p>
+                <p class="pillar-card-meta">Exemple : <strong>réseaux de pharmacies</strong> et conformité des ordonnances.</p>
+              </article>
+            </div>
+            <div class="container pillars-cta">
+              <a href="connect.html" class="btn btn-primary btn--arrow">Nous contacter</a>
             </div>
           </div>
         </section>
 
         <section class="pilot-projects" id="pilot-projects">
           <div class="container">
-            <h2 class="section-title">Projets pilotes</h2>
+            <h2 class="section-title">Études de cas</h2>
             <ul class="pilot-grid" role="list">
               <li class="pilot-item">
-                <div class="pilot-image-wrap">
-                  <div class="img-placeholder pilot-img" aria-hidden="true"></div>
-                  <p class="pilot-desc">Digitalisation évolutive.</p>
-                </div>
-                <h3 class="pilot-title">Maxon</h3>
+                <a href="case-study-maxon.html" class="pilot-item-link">
+                  <div class="pilot-image-wrap">
+                    <div class="img-placeholder pilot-img" aria-hidden="true">
+                      <img src="../images/case-studies/maxon-cover.png" alt="" decoding="async" />
+                    </div>
+                    <p class="pilot-desc">ERP vers Excel : transfert de données automatisé pour un constructeur suisse de moteurs.</p>
+                  </div>
+                  <h3 class="pilot-title">Automatisation ERP</h3>
+                  <span class="pilot-read-more">Lire l’étude de cas</span>
+                </a>
               </li>
               <li class="pilot-item">
                 <div class="pilot-image-wrap">
-                  <div class="img-placeholder pilot-img" aria-hidden="true"></div>
-                  <p class="pilot-desc">Conformité et processus.</p>
+                  <div class="img-placeholder pilot-img" aria-hidden="true">
+                    <img src="../images/case-studies/pharmacies-cover.png" alt="" decoding="async" />
+                  </div>
+                  <p class="pilot-desc">Conformité et parcours personnalisés autour des ordonnances pour réseaux de pharmacies.</p>
                 </div>
                 <h3 class="pilot-title">Pharmacies</h3>
-              </li>
-              <li class="pilot-item">
-                <div class="pilot-image-wrap">
-                  <div class="img-placeholder pilot-img" aria-hidden="true"></div>
-                  <p class="pilot-desc">Automatisation axée sur la valeur.</p>
-                </div>
-                <h3 class="pilot-title">Joachim Lux</h3>
               </li>
             </ul>
           </div>
@@ -169,16 +175,36 @@
         <section class="why-us band" id="why-us">
           <div class="container layout-2col">
             <div>
-              <h2 class="section-title">Pourquoi Consularis</h2>
+              <h2 class="section-title section-title--why">Pourquoi Consularis ?</h2>
               <ul class="why-list">
-                <li><strong>Européens</strong> et conformes aux données</li>
-                <li><strong>Évolutifs</strong>, <strong>modulaires</strong></li>
-                <li><strong>Axés sur la valeur</strong> — gains de coûts et de temps</li>
-                <li>Décisions <strong>data-driven</strong></li>
+                <li>
+                  <strong>Livraison européenne et soucieuse de la conformité</strong>
+                  <p class="why-list-detail">Nous structurons les missions pour les organisations qui exigent de la clarté sur l’hébergement, le contrôle d’accès et la traçabilité, pas des promesses floues sur le RGPD.</p>
+                </li>
+                <li>
+                  <strong>Pilotes modulaires, puis montée en charge</strong>
+                  <p class="why-list-detail">On commence par un périmètre qui prouve la valeur : carte de processus, un flux ERP vers Excel ou un workflow ciblé. On étend sans jeter ce qui tient déjà debout.</p>
+                </li>
+                <li>
+                  <strong>Des résultats mesurables</strong>
+                  <p class="why-list-detail">Temps récupéré, moins d’étapes manuelles, meilleures passations vers la finance et les opérations, pas seulement des fonctionnalités cochées « terminées ».</p>
+                </li>
+                <li>
+                  <strong>Des preuves, pas des opinions de couloir</strong>
+                  <p class="why-list-detail">Avec <a href="consularis-ai.html">Consularis.ai</a> et une découverte structurée, le « on pense que ça marche comme ça » devient une vision partageable que la direction peut arbitrer.</p>
+                </li>
+                <li>
+                  <strong>Pensé pour votre stack réel</strong>
+                  <p class="why-list-detail">Options hébergées chez vous, votre IAM, et des intégrations qui respectent l’ERP et Excel comme outils du quotidien.</p>
+                </li>
               </ul>
               <a href="connect.html" class="btn btn-primary">Contactez-nous</a>
             </div>
-            <div class="img-placeholder why-us-img" aria-hidden="true"></div>
+            <div class="why-us-image-wrap">
+              <div class="img-placeholder why-us-img">
+                <img src="../images/why-us/solution.png" alt="Schéma : comment intelligence processus, flux de données et outils sur mesure s’articulent" width="800" height="600" decoding="async" />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -196,7 +222,7 @@
                   </button>
                 </dt>
                 <dd class="faq-answer" id="faq-a1" aria-labelledby="faq-q1" hidden>
-                  <p>Nous aidons les entreprises à réduire les coûts et optimiser l'efficacité grâce à la digitalisation stratégique, au conseil ERP et aux flux de travail structurés. Nous intervenons sur les processus, l'automatisation et les décisions data-driven, dans une approche européenne et conforme aux données.</p>
+                  <p>Nous nous concentrons sur trois piliers : <strong>intelligence processus</strong> avec <a href="https://www.consularis.ai/" target="_blank" rel="noopener noreferrer">Consularis.ai</a> (cartographier, analyser, prioriser l’automatisation), <strong>transfert de données et automatisation ERP</strong> vers des outils comme Excel, et <strong>solutions personnalisées</strong> pour des opérations spécialisées, le tout dans une approche européenne et conforme aux données.</p>
                 </dd>
               </div>
               <div class="faq-item">
@@ -209,7 +235,7 @@
                   </button>
                 </dt>
                 <dd class="faq-answer" id="faq-a2" aria-labelledby="faq-q2" hidden>
-                  <p>Nous concevons et mettons en œuvre des améliorations processuelles modulaires, intégrons ou optimisons les systèmes ERP, et visons des gains mesurables en coûts et en temps. Notre travail est évolutif et adapté à vos opérations.</p>
+                  <p>Nous commençons souvent par la cartographie des processus sur <a href="https://www.consularis.ai/" target="_blank" rel="noopener noreferrer">Consularis.ai</a> afin que les priorités soient fondées sur les faits. Puis nous concevons intégrations ERP, exports de données et flux qui apportent des gains mesurables, à l’échelle de vos opérations.</p>
                 </dd>
               </div>
               <div class="faq-item">
@@ -262,14 +288,15 @@
             <a href="" class="logo">
               <span class="logo-text">Consularis</span><span class="logo-accent">Technologies</span>
             </a>
-            <p class="footer-tagline">Des flux de travail structurés qui réduisent les coûts et optimisent l'efficacité.</p>
+            <p class="footer-tagline">Intelligence processus, automatisation des données ERP et solutions digitales sur mesure.</p>
           </div>
           <div class="footer-links">
             <div class="footer-col">
               <h4>Site</h4>
               <ul>
                 <li><a href="#what-we-do">Ce que nous faisons</a></li>
-                <li><a href="#pilot-projects">Projets pilotes</a></li>
+                <li><a href="consularis-ai.html">Consularis.ai</a></li>
+                <li><a href="#pilot-projects">Études de cas</a></li>
                 <li><a href="connect.html">Contact</a></li>
               </ul>
             </div>
